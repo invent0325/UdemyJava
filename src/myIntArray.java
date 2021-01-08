@@ -2,11 +2,13 @@ public class myIntArray {
     public static void main(String[] args) {
 
         int[] myForArrayLoop = new int[25];
-
-        for(int i = 0; i < myForArrayLoop.length; i++) {
-            myForArrayLoop[i] = i * 10;
-            System.out.println("Element " + i + ", value is " + myForArrayLoop[i]);
+        printArray(myForArrayLoop);
         }
-        System.out.println("For Loop Completed");
+
+        public static void printArray(int[] array) {
+            for(int i = 0; i < array.length; i++) {
+                array[i] = i * 10;
+                System.out.println("Element " + i + ", value is " + array[i]);
+        }
     }
 }
