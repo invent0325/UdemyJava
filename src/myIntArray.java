@@ -7,6 +7,6 @@ public class myIntArray {
             myForArrayLoop[i] = i * 10;
             System.out.println("Element " + i + ", value is " + myForArrayLoop[i]);
         }
-        System.out.println("For Loop Completed");
+        System.out.println("For Loop Complete");
     }
 }
