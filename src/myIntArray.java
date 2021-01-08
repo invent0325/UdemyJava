@@ -9,6 +9,5 @@ public class myIntArray {
             System.out.println("Element " + i + ", value is " + myForArrayLoop[i]);
         }
         System.out.println("For Loop Complete");
-        System.out.println(myArray[15]);
     }
 }
