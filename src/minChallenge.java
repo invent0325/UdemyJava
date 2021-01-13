@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.util.stream.IntStream;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class minChallenge {
 
@@ -11,10 +11,22 @@ public class minChallenge {
         scanner.nextLine();
 
         int[] returnedArray = readIntegers(counter);
+
         int returnedMin = findMin(returnedArray);
         int returnedMax = findMax(returnedArray);
+        int returnedSum = findSum(returnedArray);
+
         System.out.println("Min = " + returnedMin);
         System.out.println("Max = " + returnedMax);
+        System.out.println("Total = " + returnedSum);
+    }
+
+    private static int findSum(int[] array) {
+        for(int value : array) {
+            AtomicInteger myTotal = new AtomicInteger(Integer.sum(array[value], value));
+            return myTotal.get();
+        }
+        return 0;
     }
 
     private static int[] readIntegers(int count) {
@@ -38,6 +50,7 @@ public class minChallenge {
         return min;
     }
     private static int findMax(int[] array) {
+
         int max = Integer.MAX_VALUE;
         for(int value : array ) {
             max = value;
